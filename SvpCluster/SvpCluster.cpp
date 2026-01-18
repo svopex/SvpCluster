@@ -61,23 +61,23 @@ SCSFExport scsf_MarkVolBarFunction(SCStudyGraphRef sc)
 	// Ask vs bid on each row: 2
 
 	minimumSizeOfCluster.SetInt(3);
-	minimumSizeOfCluster.Name = "Minimum size of cluster";
+	minimumSizeOfCluster.Name = "Minimum size of cluster"; // Minimalni pocet urovni v clusteru.
 	inputMinimumVolume.SetInt(40);
-	inputMinimumVolume.Name = "Minimum volume";
+	inputMinimumVolume.Name = "Minimum volume"; // Minimalni objem kdekoli v clusteru.
 	askBidCompareMultiplicatorInputRef.SetDouble(1.1);
-	askBidCompareMultiplicatorInputRef.Name = "Ask vs bid for the whole cluster";
+	askBidCompareMultiplicatorInputRef.Name = "Ask vs bid for the whole cluster"; // Ask vs bid v clusteru, berou se vsechny urovne dohromady.
 	maximumCountOfSmallVolumesInCluster.SetInt(0);
-	maximumCountOfSmallVolumesInCluster.Name = "Maximum count of small volumes in cluster";
+	maximumCountOfSmallVolumesInCluster.Name = "Maximum count of small volumes in cluster"; // Mozny pocet radku v clusteru, ktere nesplnuji podminku.
 	showClusterInAppropriatePartOfCandle.SetYesNo(true);
-	showClusterInAppropriatePartOfCandle.Name = "Show cluster in appropriate part of candle";
+	showClusterInAppropriatePartOfCandle.Name = "Show cluster in appropriate part of candle"; // Cluster musi byt ve spravne casti svicky (bid cluster v dolni casti, ask cluster v horni casti).
 	compareVolumeWithPreviousCandle.SetYesNo(false);
-	compareVolumeWithPreviousCandle.Name = "Compare volume with previous candle"; // Je alespon jedno BidVolume vetsi nez nejvetsi bid na predchozi usecce?
+	compareVolumeWithPreviousCandle.Name = "Compare volume with previous candle"; // Je alespon jedno BidVolume vetsi nez nejvetsi BidVolume na predchozi usecce? To same Ask volume.
 	inputMinimumImbalanceVolume.SetInt(0);
-	inputMinimumImbalanceVolume.Name = "Minimum imbalance volume"; // Rozdil mezi bid a ask volume na danem price levelu
+	inputMinimumImbalanceVolume.Name = "Minimum imbalance volume"; // Rozdil mezi bid a ask volume na danem price levelu musi byt absolutne toto cislo.
 	askBidCompareLocalMultiplicatorInputRef.SetDouble(1.1);
-	askBidCompareLocalMultiplicatorInputRef.Name = "Ask vs bid on each row";
+	askBidCompareLocalMultiplicatorInputRef.Name = "Ask vs bid on each row"; // Ask vs bid v clusteru, na jednotlivych urovnich.
 	inputMinimumVolumeOnFirstLevel.SetInt(100);
-	inputMinimumVolumeOnFirstLevel.Name = "Minimum volume on first level";
+	inputMinimumVolumeOnFirstLevel.Name = "Minimum volume on first level"; // Minimalni objem na prvni urovni clusteru.
 
 	askMaxClusterPrice.Name = "askMaxClusterPrice";
 	askMaxClusterPrice.DrawStyle = DRAWSTYLE_DASH;
